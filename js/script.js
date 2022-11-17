@@ -11,7 +11,7 @@ dropdownMenu.addEventListener("click", (e) => {
   content.childNodes.forEach((child) => child.remove());
   document.querySelector("#we").style.display = "none";
   document.querySelector("#galaxy").style.display = "none";
-  document.querySelector("#planet_content").style.display = "block";
+  document.querySelector("#planet_content").style.display = "flex";
 
   let selectedPlanet = e.target.innerText;
   fetch(`https://images-api.nasa.gov/search?q=${selectedPlanet}%2011...`)
@@ -31,12 +31,6 @@ dropdownMenu.addEventListener("click", (e) => {
         figure.appendChild(p);
         content.appendChild(figure);
       }
-      // imgTag1 = document.querySelector("#planet_image1");
-      // imgTag2 = document.querySelector("#planet_image2");
-      // imgTag3 = document.querySelector("#planet_image3");
-      // imgTag1.setAttribute("src", imageUrl1);
-      // imgTag2.setAttribute("src", imageUrl2);
-      // imgTag3.setAttribute("src", imageUrl3);
     });
 });
 
