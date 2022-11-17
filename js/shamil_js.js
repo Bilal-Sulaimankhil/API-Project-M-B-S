@@ -23,28 +23,41 @@ for (let i = 0; i < arr.length; i++) {
 
 }*/
 
-let renderThumbnails = async(url) => {
-    const response = await fetch(url);
-    const data = await response.json();
-    let sect = document.getElementsByTagName("section")[0];
-    sect.innerHTML = '';
-    for (let item of data.collection.items) {
-        let img = document.createElement("img")
-        img.setAttribute("src", item.links[0].href)
-        img.setAttribute("width", 300)
-        sect.appendChild(img)
-    }
+// let renderThumbnails = async(url) => {
+//     const response = await fetch(url);
+//     const data = await response.json();
+//     let sect = document.getElementsByTagName("section")[0];
+//     sect.innerHTML = '';
+//     /* first option array OF */
+//     for (let item of data.collection.items) {
+//         let img = document.createElement("img")
+//         img.setAttribute("src", item.links[0].href)
+//         img.setAttribute("width", 300)
+//         sect.appendChild(img)
+//     }
 
+//     /*second option for testing */
+//     // for (let value of Object.values(data)) {
 
-    // for (let value of Object.values(data)) {
+//     // }
 
-    // }
-    // Object.values(data).forEach((value) => {
+//     // Object.values(data).forEach((value) => {
 
-    // })
-    // for (let key of Object.keys(data)) {
-    //     let value = data[key];
-    // }
-    // TODO: next + previous button 
+//     // })
+//     // for (let key of Object.keys(data)) {
+//     //     let value = data[key];
+//     // }
+//     // TODO: next + previous button 
+// }
+// renderThumbnails("https://images-api.nasa.gov/search?q=mars%2011...");
+
+function MYFunc() {
+    debugger;
+    console.log(this);
 }
-renderThumbnails("https://images-api.nasa.gov/search?q=mars%2011...");
+const value = { val: "A" }
+MYFunc.apply(value)
+const increment = (number) => number++
+
+
+    console.log(increment(23))
