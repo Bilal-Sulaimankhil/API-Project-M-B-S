@@ -21,9 +21,15 @@ dropdownMenu.addEventListener("click", (e) => {
                 const figure = document.createElement("figure");
                 const image = document.createElement("img");
                 image.setAttribute("src", data.collection.items[index].links[0].href);
+                image.style.width = "300px;"
                 const figCaption = document.createElement("figcaption");
                 figCaption.innerText = data.collection.items[index].data[0].title;
+                // figure.style.display = "flex"
                 const p = document.createElement("p");
+                p.style.width = "100px"
+                p.style.textOverflow = "ellipsis"
+                p.style.overflow = "hidden";
+
                 p.innerText = data.collection.items[index].data[0].description;
 
                 figure.appendChild(image);
