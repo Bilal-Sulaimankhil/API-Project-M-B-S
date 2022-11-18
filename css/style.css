@@ -10,8 +10,8 @@ body {
 }
 
 .navbar {
-    overflow: hidden;
     z-index: 100;
+    position: relative;
 }
 
 .navbar a {
@@ -25,7 +25,6 @@ body {
 
 .dropdown {
     float: left;
-    overflow: hidden;
 }
 
 .dropdown .dropbtn {
@@ -319,26 +318,63 @@ h1 {
 section {}
 
 figure {
-    /* display: flex; */
-    width: 200px;
+    width: 330px;
     background-color: white;
-    margin: 20px;
-    /* height: 200px; */
+    margin: 20px 30px;
     border-radius: 15px;
-    /* height: 500px; */
+    height: 420px;
     overflow: hidden;
     text-overflow: ellipsis;
+    box-shadow: 5px 3px 10px 2px rgba(255, 255, 255, 0.566);
+    transition: 0.3s;
+}
+
+figure:hover {
+    box-shadow: 31px 31px 33px 0px rgba(255, 255, 255, 0.566);
 }
 
 figure img {
-    /* width: 100%; */
-    /* width: 100px; */
+    width: 100%;
+    height: 240px;
     border-radius: 15px 15px 0 0;
 }
 
+figcaption {
+    font-weight: 900;
+    margin: 10px 20px;
+    font-size: 17px;
+}
+
 figure p {
-    width: 200px;
+    margin: 8px 15px;
+    text-align: justify;
+    font-size: 13px;
 }
 
 
 /* BILAL */
+
+@media screen and (max-width: 768px) {
+    #font,
+    #font1 {
+        display: none;
+    }
+    .git-in {
+        order: 1;
+    }
+    .dropdown {
+        order: 2;
+    }
+    #galaxy {
+        display: none;
+    }
+    body {
+        background-image: url(rocket.jpg);
+        background-size: cover;
+        width: auto;
+    }
+    h1 {
+        font: bold 100% Consolas, Monaco, monospace;
+        margin: 1em 0.5em;
+    }
+}
